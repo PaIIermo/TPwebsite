@@ -42,8 +42,8 @@ function addNewNote(dateText, pdfPath) {
 }
 
 addNewNote("25. September 2023", "assets/2.pdf");
-addNewNote("2. November 2023", "assets/3.pdf");
-addNewNote("9. November 2023", "assets/4.pdf");
-addNewNote("16. November 2023", "assets/5.pdf");
-addNewNote("23. November 2023", "assets/6.pdf");
-addNewNote("30. November 2023", "assets/7.pdf");
+addNewNote("2. Október 2023", "assets/3.pdf");
+addNewNote("9. Október 2023", "assets/4.pdf");
+addNewNote("16. Október 2023", "assets/5.pdf");
+addNewNote("23. Október 2023", "assets/6.pdf");
+addNewNote("30. Október 2023", "assets/7.pdf");
