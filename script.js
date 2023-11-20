@@ -41,9 +41,11 @@ function addNewNote(dateText, pdfPath) {
     }
 }
 
-addNewNote("25. September 2023", "assets/2.pdf");
-addNewNote("2. Október 2023", "assets/3.pdf");
-addNewNote("9. Október 2023", "assets/4.pdf");
-addNewNote("16. Október 2023", "assets/5.pdf");
-addNewNote("23. Október 2023", "assets/6.pdf");
-addNewNote("30. Október 2023", "assets/7.pdf");
+addNewNote("25. September 2023", "assets/1_25-9-2023.pdf");
+addNewNote("2. Október 2023", "assets/2_2-10-2023.pdf");
+addNewNote("9. Október 2023", "assets/3_9-10-2023.pdf");
+addNewNote("16. Október 2023", "assets/4_16-10.pdf");
+addNewNote("23. Október 2023", "assets/5_23-10.pdf");
+addNewNote("30. Október 2023", "assets/6_30-10.pdf");
+addNewNote("6. November 2023", "assets/7_6-11.pdf");
+addNewNote("13. November 2023", "assets/8_13-11.pdf");
