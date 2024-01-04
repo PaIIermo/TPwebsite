@@ -1,44 +1,43 @@
 function showTab(event, tabName) {
-    
-    const tabContents = document.querySelectorAll('.tabcontent');
-    for (const tab of tabContents) {
-        tab.classList.remove("display-flex")
-    }
+  const tabContents = document.querySelectorAll(".tabcontent");
+  for (const tab of tabContents) {
+    tab.classList.remove("display-flex");
+  }
 
-    const tabLinks = document.querySelectorAll('.tablinks');
-    for (const link of tabLinks) {
-        link.classList.remove('active');
-    }
-    event.currentTarget.classList.add('active');
+  const tabLinks = document.querySelectorAll(".tablinks");
+  for (const link of tabLinks) {
+    link.classList.remove("active");
+  }
+  event.currentTarget.classList.add("active");
 
-    const selectedTab = document.getElementById(tabName);
-    selectedTab.classList.add("display-flex")
+  const selectedTab = document.getElementById(tabName);
+  selectedTab.classList.add("display-flex");
 }
 
-window.onload = function() {
-    document.querySelector('.tablinks').click();
-}
+window.onload = function () {
+  document.querySelector(".tablinks").click();
+};
 
 function addNewNote(dateText, pdfPath) {
-    if (pdfPath.trim() !== "") {
-        var noteElement = document.createElement("div");
-        noteElement.classList.add("text-node");
+  if (pdfPath.trim() !== "") {
+    var noteElement = document.createElement("div");
+    noteElement.classList.add("text-node");
 
-        var linkElement = document.createElement("a");
-        linkElement.classList.add("asset");
-        linkElement.href = pdfPath;
-        linkElement.target = "_blank";
+    var linkElement = document.createElement("a");
+    linkElement.classList.add("asset");
+    linkElement.href = pdfPath;
+    linkElement.target = "_blank";
 
-        var dateStrongElement = document.createElement("strong");
-        dateStrongElement.textContent = "Dátum: " + dateText;
+    var dateStrongElement = document.createElement("strong");
+    dateStrongElement.textContent = "Dátum: " + dateText;
 
-        linkElement.appendChild(dateStrongElement);
+    linkElement.appendChild(dateStrongElement);
 
-        noteElement.appendChild(linkElement);
+    noteElement.appendChild(linkElement);
 
-        var container = document.getElementById("meetings");
-        container.insertBefore(noteElement, container.firstChild);
-    }
+    var container = document.getElementById("meetings");
+    container.insertBefore(noteElement, container.firstChild);
+  }
 }
 
 addNewNote("25. September 2023", "assets/1_25-9-2023.pdf");
@@ -49,3 +48,5 @@ addNewNote("23. Október 2023", "assets/5_23-10-2023.pdf");
 addNewNote("30. Október 2023", "assets/6_30-10-2023.pdf");
 addNewNote("6. November 2023", "assets/7_6-11-2023.pdf");
 addNewNote("13. November 2023", "assets/8_13-11-2023.pdf");
+addNewNote("23. November 2023", "assets/9_23-11-2023.pdf");
+addNewNote("4. December 2023", "assets/10_4-11-2023.pdf");
