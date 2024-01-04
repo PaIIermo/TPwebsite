@@ -49,4 +49,4 @@ addNewNote("30. Október 2023", "assets/6_30-10-2023.pdf");
 addNewNote("6. November 2023", "assets/7_6-11-2023.pdf");
 addNewNote("13. November 2023", "assets/8_13-11-2023.pdf");
 addNewNote("23. November 2023", "assets/9_23-11-2023.pdf");
-addNewNote("4. December 2023", "assets/10_4-11-2023.pdf");
+addNewNote("4. December 2023", "assets/10_4-12-2023.pdf");
