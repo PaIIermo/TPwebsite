@@ -1,108 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GPS Mapping Project</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h1>Map matching pre GPS dáta z CSV</h1>
+      <h1>Map matching pre GPS dáta z CSV</h1>
     </header>
 
     <nav>
-        <ul>
-            <li><a onclick="showTab(event, 'about')" class="tablinks">O projekte</a></li>
-            <li><a onclick="showTab(event, 'team')" class="tablinks">Tím</a></li>
-            <li><a onclick="showTab(event, 'progres')" class="tablinks">Progres</a></li>
-            <li><a onclick="showTab(event, 'meetings')" class="tablinks">Zápisnice</a></li>
-        </ul>
+      <ul>
+        <li>
+          <a onclick="showTab(event, 'about')" class="tablinks">O projekte</a>
+        </li>
+        <li><a onclick="showTab(event, 'team')" class="tablinks">Tím</a></li>
+        <li>
+          <a onclick="showTab(event, 'progres')" class="tablinks">Progres</a>
+        </li>
+        <li>
+          <a onclick="showTab(event, 'meetings')" class="tablinks">Zápisnice</a>
+        </li>
+      </ul>
     </nav>
-     
 
     <div class="content-container">
-        <div id="about" class="tabcontent">
-            <h3>Zadanie úlohy</h3>
-            <p class="text-node">
-                Map matching - inak povedané mapovanie GPS trajektórií na cestnú sieť z mapových podkladov je v súčasnosti rozšírený spôsob ako uhladiť nepresné trajektórie na prehľadné trasy. 
-                Keďže vstupom môžu byť trajektórie s rôznymi nepresnosťami, je náročné ich prehľadne vizualizovať. Cieľom projektu je vybrať si existujúci map matching, ktorý využiť na map matching GPS trás v CSV  formáte.
-                Treba vytvoriť docker image, ktorý bude mať rozbehnutý map matching, ktorý podľa typu pohybu (peši, bicykel, auto, vlak) zvolí vhodný spôsob mapovania trajektórie na mapové podklady. 
-                Vstupom do containera vytvoreného z image bude minimálne CSV dataset (prípadne cesta k mapovým podkladom), a výstup bude CSV dataset, ktorý je už po map matching-u.
-            </p>
-            <p class="text-node display-flex">
-                <a class="asset" href="assets/Ponuka.pdf" target="_blank"><strong>Ponuka pre zadanie</strong></a>
-            </p>
+      <div id="about" class="tabcontent">
+        <h3>Zadanie úlohy</h3>
+        <p class="text-node">
+          Map matching - inak povedané mapovanie GPS trajektórií na cestnú sieť
+          z mapových podkladov je v súčasnosti rozšírený spôsob ako uhladiť
+          nepresné trajektórie na prehľadné trasy. Keďže vstupom môžu byť
+          trajektórie s rôznymi nepresnosťami, je náročné ich prehľadne
+          vizualizovať. Cieľom projektu je vybrať si existujúci map matching,
+          ktorý využiť na map matching GPS trás v CSV formáte. Treba vytvoriť
+          docker image, ktorý bude mať rozbehnutý map matching, ktorý podľa typu
+          pohybu (peši, bicykel, auto, vlak) zvolí vhodný spôsob mapovania
+          trajektórie na mapové podklady. Vstupom do containera vytvoreného z
+          image bude minimálne CSV dataset (prípadne cesta k mapovým podkladom),
+          a výstup bude CSV dataset, ktorý je už po map matching-u.
+        </p>
+        <p class="text-node display-flex">
+          <a class="asset" href="assets/Ponuka.pdf" target="_blank"
+            ><strong>Ponuka pre zadanie</strong></a
+          >
+        </p>
+      </div>
+
+      <div id="team" class="tabcontent display-flex">
+        <div class="team-member">
+          <p>
+            <strong>Adam Kačo</strong><br />
+            Univerzitné ID: 128504<br />
+            Email:
+            <a class="asset" href="mailto:xkaco@stuba.sk">xkaco@stuba.sk</a
+            ><br />
+          </p>
         </div>
-    
-        <div id="team" class="tabcontent display-flex">
-            <div class="team-member">
-                <p>
-                    <strong>Adam Kačo</strong><br>
-                    Univerzitné ID: 128504<br>
-                    Email: <a class="asset" href="mailto:xkaco@stuba.sk">xkaco@stuba.sk</a><br>
-                </p>
-            </div>
-            <div class="team-member">
-                <p>
-                    <strong>Boris Kamenický</strong><br>
-                    Univerzitné ID: 97819<br>
-                    Email: <a class="asset" href="mailto:xkamenicky@stuba.sk">xkamenicky@stuba.sk</a><br>
-                </p>
-            </div>
-            <div class="team-member">
-                <p>
-                    <strong>Dávid Balla</strong><br>
-                    Univerzitné ID: 104415<br>
-                    Email: <a class="asset" href="mailto:xballad@stuba.sk">xballad@stuba.sk</a><br>
-                </p>
-            </div>
-            <div class="team-member">
-                <p>
-                    <strong>František Hančin</strong><br>
-                    Univerzitné ID: 104467<br>
-                    Email: <a  class="asset" href="mailto:xhancin@stuba.sk">xhancin@stuba.sk</a><br>
-                </p>
-            </div>
-            <div class="team-member">
-                <p>
-                    <strong>Pavol Polednák</strong><br>
-                    Univerzitné ID: 97012<br>
-                    Email: <a class="asset" href="mailto:xpolednakp@stuba.sk">xpolednakp@stuba.sk</a><br>
-                </p>
-            </div>
+        <div class="team-member">
+          <p>
+            <strong>Boris Kamenický</strong><br />
+            Univerzitné ID: 97819<br />
+            Email:
+            <a class="asset" href="mailto:xkamenicky@stuba.sk"
+              >xkamenicky@stuba.sk</a
+            ><br />
+          </p>
         </div>
-        
-    
-        <div id="progres" class="tabcontent">
-            <div class="text-node">
-                <strong>Aktuálny progres</strong>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-            </div>
-        
-            <div class="text-node">
-                <strong>Zdroje a technológie</strong>
-                <ul>
-                    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                    <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-                </ul>
-            </div>
+        <div class="team-member">
+          <p>
+            <strong>Dávid Balla</strong><br />
+            Univerzitné ID: 104415<br />
+            Email:
+            <a class="asset" href="mailto:xballad@stuba.sk">xballad@stuba.sk</a
+            ><br />
+          </p>
         </div>
-    
-        <div id="meetings" class="tabcontent">
-            
+        <div class="team-member">
+          <p>
+            <strong>František Hančin</strong><br />
+            Univerzitné ID: 104467<br />
+            Email:
+            <a class="asset" href="mailto:xhancin@stuba.sk">xhancin@stuba.sk</a
+            ><br />
+          </p>
         </div>
-        
+        <div class="team-member">
+          <p>
+            <strong>Pavol Polednák</strong><br />
+            Univerzitné ID: 97012<br />
+            Email:
+            <a class="asset" href="mailto:xpolednakp@stuba.sk"
+              >xpolednakp@stuba.sk</a
+            ><br />
+          </p>
+        </div>
+      </div>
+
+      <div id="progres" class="tabcontent">
+        <div class="text-node">
+          <strong>Aktuálny progres</strong>
+          <ul>
+            <li>
+              Minimálny docker projekt je pripravený
+              <a href="https://github.com/AdamKaco/TP/tree/cli"
+                >v repozitári na branch cli</a
+              >. Plán je ho prezentovať, vyriešiť nedostatky a začať pracovať na
+              doladení
+            </li>
+            <li>
+              <!--BMPR-->
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-node">
+          <strong>Zdroje a technológie</strong>
+          <ul>
+            <li>
+              Momentálny konsenzus je za použitie routing enginu Valhalla.
+            </li>
+            <li>
+              Využívame docker image
+              <a href="https://github.com/gis-ops/docker-valhalla"
+                >Valhalla_gis-ops</a
+              >
+              a
+              <a href="https://valhalla.github.io/valhalla/"
+                >Valhalla dokumentáciu</a
+              >.
+            </li>
+            <li>Skripty vyrobené pre tento projekt sú v jazyku Python.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="meetings" class="tabcontent"></div>
     </div>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
