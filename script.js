@@ -50,4 +50,11 @@ addNewNote("6. November 2023", "assets/7_6-11-2023.pdf");
 addNewNote("13. November 2023", "assets/8_13-11-2023.pdf");
 addNewNote("23. November 2023", "assets/9_23-11-2023.pdf");
 addNewNote("4. December 2023", "assets/10_4-12-2023.pdf");
-addNewNote("7. Marca 2024", "assets/12_7-3-2024.pdf");
+
+addNewNote("15. Februára 2024", "assets/1_15-2-2024.pdf");
+addNewNote("20. Februára 2024", "assets/2_20-2-2024.pdf");
+addNewNote("27. Februára 2024", "assets/3_27-2-2024.pdf");
+addNewNote("7. Marca 2024", "assets/4_7-3-2024.pdf");
+addNewNote("14. Marca 2024", "assets/5_14-3-2024.pdf");
+addNewNote("22. Marca 2024", "assets/6_22-3-2024.pdf");
+addNewNote("5. Apríla 2024", "assets/7_5-4-2024.pdf");
